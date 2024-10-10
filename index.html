@@ -7,6 +7,9 @@
     <title>GregTheBarber</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
     <!-- AOS CSS for Animations -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
     
@@ -22,30 +25,30 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', sans-serif;
-            background-color: #000;
-            color: #fff;
+            font-family: 'Montserrat', sans-serif; /* Font per il corpo */
+            background-color: #000; /* Colore di sfondo della pagina */
+            color: #fff; /* Colore del testo */
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #fff; /* Sfondo bianco per il menu */
             padding: 20px;
-            text-align: center;
+            text-align: right; /* Allinea il contenuto a destra */
             position: relative;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end; /* Allinea le voci del menu a destra */
             gap: 20px;
         }
 
         nav ul li a {
-            color: #fff;
+            color: #000; /* Testo nero per i link del menu */
             text-decoration: none;
             font-size: 18px;
-            font-weight: bold;
+            font-weight: 600; /* Font-weight per il link del menu */
             transition: color 0.3s ease;
         }
 
@@ -57,12 +60,12 @@
         .social-links {
             position: absolute;
             top: 10px;
-            left: 10px;
+            right: 10px; /* Posiziona i link social a destra */
         }
 
         .social-links img {
             width: 30px;
-            margin-right: 10px;
+            margin-left: 10px; /* Spaziatura tra le icone social */
         }
 
         #background-image {
@@ -77,7 +80,12 @@
         #services {
             padding: 50px;
             text-align: center;
-            background-color: #292929;
+            background-color: #000; /* Colore di sfondo dei servizi in nero */
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif; /* Font per i titoli */
+            margin-bottom: 20px;
         }
 
         .service-box {
@@ -85,7 +93,7 @@
             width: 30%;
             margin: 20px;
             padding: 20px;
-            background-color: #292929;
+            background-color: #292929; /* Colore di sfondo della casella di servizio */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
@@ -113,7 +121,7 @@
         }
 
         button {
-            background-color: #f8485e;
+            background-color: #f8485e; /* Colore del pulsante */
             color: white;
             padding: 10px 20px;
             border: none;
@@ -124,19 +132,19 @@
         }
 
         button:hover {
-            background-color: #ffdd57;
+            background-color: #ffdd57; /* Colore del pulsante al passaggio del mouse */
         }
 
         @media (max-width: 768px) {
             .service-box {
-                width: 100%;
-                margin: 10px 0;
+                width: 100%; /* Larghezza completa su schermi piccoli */
+                margin: 10px 0; /* Meno margine */
             }
             header nav ul {
-                flex-direction: column;
+                flex-direction: column; /* Menu verticale su schermi piccoli */
             }
             .social-links {
-                top: 20px;
+                top: 20px; /* Posizione dei link social */
             }
         }
     </style>
@@ -145,9 +153,9 @@
 
     <header>
         <div class="social-links">
-            <a href="#"><img src="facebook.png" alt="Facebook link"></a>
-            <a href="#"><img src="whatsapp.png" alt="WhatsApp link"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram link"></a>
+            <a href="#"><img src="facebook.png" alt="Link a Facebook"></a>
+            <a href="#"><img src="whatsapp.png" alt="Link a WhatsApp"></a>
+            <a href="#"><img src="instagram.png" alt="Link a Instagram"></a>
         </div>
         <nav>
             <ul>
@@ -162,17 +170,17 @@
 
     <section id="services" data-aos="fade-up">
         <h2>Servizi Offerti</h2>
-        <article class="service-box">
+        <article class="service-box" data-aos="fade-up">
             <h3>Tagli di Capelli</h3>
             <p>Tagli classici e moderni su misura per te.</p>
             <img src="haircut-image.jpg" alt="Taglio di capelli personalizzato">
         </article>
-        <article class="service-box">
+        <article class="service-box" data-aos="fade-up">
             <h3>Rasature</h3>
             <p>Rasature di lusso con precisione e cura.</p>
             <img src="shave-image.jpg" alt="Rasatura di lusso">
         </article>
-        <article class="service-box">
+        <article class="service-box" data-aos="fade-up">
             <h3>Rifiniture della Barba</h3>
             <p>Fatti rifinire e stilizzare la barba a perfezione.</p>
             <img src="beard-image.jpg" alt="Rifinitura della barba">
@@ -192,18 +200,18 @@
     <footer>
         <p>&copy; 2024 VRchitect X GregTheBarber. Tutti i diritti riservati.</p>
         <div class="social-links">
-            <a href="#"><img src="facebook.png" alt="Facebook link"></a>
-            <a href="#"><img src="whatsapp.png" alt="WhatsApp link"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram link"></a>
+            <a href="#"><img src="facebook.png" alt="Link a Facebook"></a>
+            <a href="#"><img src="whatsapp.png" alt="Link a WhatsApp"></a>
+            <a href="#"><img src="instagram.png" alt="Link a Instagram"></a>
         </div>
     </footer>
 
     <!-- AOS and JS for Animations -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     
     <!-- Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <script>
         $(document).ready(function() {
