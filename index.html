@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GregTheBarber</title>
-
+    
     <!-- AOS CSS for Animations -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
     
@@ -92,6 +92,14 @@
             font-size: 1.5rem;
         }
 
+        #transcription {
+            background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+            color: #000; /* Dark text for contrast */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
         #background-image {
             background-image: url('img1.jpeg'); /* Background image below the video */
             background-size: cover;
@@ -154,6 +162,22 @@
         button:hover {
             background-color: #ffdd57; /* Muted Yellow on hover */
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-box {
+                width: 100%; /* Full width on smaller screens */
+                margin: 10px 0; /* Less margin */
+            }
+
+            #hero h1 {
+                font-size: 2rem; /* Smaller font for smaller screens */
+            }
+
+            #hero p {
+                font-size: 1rem; /* Smaller font for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -186,25 +210,31 @@
         </div>
     </section>
 
+    <div id="transcription">
+        <h3>Transcription</h3>
+        <p><strong>English:</strong> Welcome to GregTheBarber! Your grooming journey starts here. Precision and style in every cut.</p>
+        <p><strong>Spanish:</strong> ¡Bienvenido a GregTheBarber! Tu viaje de cuidado personal comienza aquí. Precisión y estilo en cada corte.</p>
+    </div>
+
     <div id="background-image"></div> <!-- Background image section -->
 
     <section id="services">
         <h2>Our Services</h2>
-        <div class="service-box">
+        <article class="service-box">
             <h3>Haircuts</h3>
             <p>Classic and modern haircuts tailored to you.</p>
-            <img src="haircut-image.jpg" alt="Haircuts">
-        </div>
-        <div class="service-box">
+            <img src="haircut-image.jpg" alt="A barber performing a haircut">
+        </article>
+        <article class="service-box">
             <h3>Shaves</h3>
             <p>Luxury shaves with precision and care.</p>
-            <img src="shave-image.jpg" alt="Shaves">
-        </div>
-        <div class="service-box">
+            <img src="shave-image.jpg" alt="A barber giving a luxury shave">
+        </article>
+        <article class="service-box">
             <h3>Beard Trims</h3>
             <p>Get your beard groomed and styled to perfection.</p>
-            <img src="beard-image.jpg" alt="Beard Trims">
-        </div>
+            <img src="beard-image.jpg" alt="A barber trimming a beard">
+        </article>
     </section>
 
     <section id="carousel">
@@ -218,7 +248,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Your Grooming Website. All Rights Reserved.</p>
+        <p>&copy; 2024 VRchitect X GregTheBarber. All Rights Reserved.</p>
     </footer>
 
     <!-- AOS and JS for Animations -->
